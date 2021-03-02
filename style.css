@@ -2,18 +2,93 @@
     box-sizing: border-box;
 }
 body{
-    /* padding:0 auto; */
+    margin: 0;
     direction: rtl;
     text-align: right;
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 900px;
 }
-footer{ 
-    /* background: linear-gradient(#756B6B, #9198e5);   */
-    /* background-clip: content-box; */
+.header{
+    background-image: linear-gradient(#909090 0%,#909090 10%,#909090 85%, #fff );                
+    height: 105px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.paz-logo{
+    position:absolute;
+    top:30px;
+    right:250px;
+}
+.search, nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; 
+    margin-top: 20px;
+    width: 900px;
+}
+.search>*{
+    display:block;
+}
+nav{
+    margin-top: 30px;
+}
+nav>ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding:0;
+    margin:0;
+    height: 17px;
+}
+nav > ul > li > a, .dropdown-content > a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding:0 15px; 
+}
+nav > ul > li:not(:last-child) > a{
+    border-left:2px solid #bcbcbc;
+}
+.dropdown-content > a {
+    padding: 0;
+}
 
+nav > ul > li > a:hover, nav>ul>li>.dropdown-content > a:hover{
+    color: blue;
+    text-decoration:underline;
+  }
+nav>ul>li>.dropdown-content > a:hover {
+    color: blue;
+    background-color: #bcbcbc;
+}
+.dropdown-content>a{
+    border-bottom: 1px solid #bcbcbc;
+    padding:5px 5px;
+}
+.dropdown {
+    position: relative;
+  }
+  .dropdown-content {
     background-color: #909090;
-    /* background-image: linear-gradient( #999, #8A8B8C); */
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    width: max-content;
+    display: none;
+    padding-top: 10px;
+    background-image: linear-gradient(0deg,#909090 ,#959595 85%,#9a9a9a 90%, #aaa 95%, #ccc );                
+
+}
+  .dropdown:hover > .dropdown-content {
+    display: block;
+  }
+footer{ 
+    background-color: #919191;
     position: fixed;
     height: 38px;
     bottom: 0;
@@ -25,9 +100,6 @@ footer{
     justify-content: center;
     flex-wrap: wrap;
     padding:10px;
-    align-items: center;
-    width: 900x;
-    /* border-left: 2px solid white; */
 }
 .wrapper>div>a{
     color: white;
@@ -36,9 +108,6 @@ footer{
     text-decoration: none;
     border-left: 2px solid white;
     display: inline-block;
-}
-.wrapper>div:last-child{
-    border: none;
 }
 .wrapper>div:last-child>a{
     color: red;
