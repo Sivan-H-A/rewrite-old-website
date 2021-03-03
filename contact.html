@@ -5,9 +5,191 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src="script.js"></script>
+    <title>פז - צור קשר</title>
 </head>
 <body>
-    <h1>hello, here will be a form</h1>
+    <header>
+        <div class="container">
+            <div class="search">
+                <a class="lang" href="#">English</a>
+                <input type="text" placeholder="רשום מילת חיפוש">
+                <a href="#">
+                    <img src="images/search_button.png" alt="">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="change-home" href="#">
+                        <img class="home-pic" src="images/menu_home1.png" alt="">
+                        
+                    </a></li>
+                    <li class="dropdown">
+                        <a href="#">אודות</a>
+                        <div class="dropdown-content">
+                            <a href="#">אודות</a>
+                            <a href="#">היסטוריה</a>
+                            <a href="#">חזון וערכים</a>
+                            <a href="#">מבנה הקבוצה</a>
+                            <a href="#">חברי דירקטוריון</a>
+                            <a href="#">הנהלת הקבוצה</a>
+                            <a href="#">פרסים והוקרה</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">חטיבות</a>
+                        <div class="dropdown-content">
+                            <a href="#">חטיבות</a>
+                            <a href="#">קמעונאות ומסחר</a>
+                            <a href="#">תעשיות ושירותים</a>
+                            <a href="#">זיקוק</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">אחריות תאגידית</a>
+                        <div class="dropdown-content">
+                            <a href="#">אחריות תאגידית</a>
+                            <a href="#">הקוד האתי</a>
+                            <a href="#">מעורבות חברתית</a>
+                            <a href="#">נגישות</a>
+                            <a href="#">איכות הסביבה ובטיחות</a>
+                            <a href="#">דירוג מעלה</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">קשרי משקיעים</a>
+                        <div class="dropdown-content">
+                            <a href="#">פרופיל חברה</a>
+                            <a href="#">דו"חות כספיים</a>
+                            <a href="#">כלים למשקיע</a>
+                            <a href="#">נתוני מניה</a>
+                            <a href="#">אסיפות כלליות</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">התחנות שלנו</a>
+                        <div class="dropdown-content">
+                            <a href="#">התחנות שלנו</a>
+                            <a href="#">נגישות מתחמי פז</a>
+                            <a href="#">רשימת תחנות</a>
+                            <a href="#">מועדונים</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">קריירה</a>
+                        <div class="dropdown-content">
+                            <a href="#">לעבוד בפז</a>
+                            <a href="#">ניהול תחנת פז</a>
+                            <a href="#">קריירה</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">חדשות ומדיה</a>
+                        <div class="dropdown-content">
+                            <a href="#">פרסומות</a>
+                            <a href="#">הודעות לעיתונות</a>
+                        </div>
+                    </li>
+                </ul>
+                <img class="paz-logo" src="images/paz_logo.png" alt="">
+            </nav>
+             
+        </div>
+    </header>
+<main>
+    <div class="container">
+        <div class="contact-row">
+            <div class="contact-box">
+                <span>&#9664;</span>
+                <a href="contact.html">צור קשר</a>
+            </div>
+            <div class="contact-header">
+                <div>
+                    <a href="index.html">עמוד הבית</a>
+                    <span>></span>
+                    <span>צור קשר</span>
+                </div>
+                <div>
+                    <p class= "contact-title">צור קשר</p>
+                </div>
+                <div class="contact-form">
+                    <p class="p-15">צור קשר</p>
+                    <p class="p-13">ליצירת קשר עם קשרי לקוחות אנא מלאו את הפרטים הבאים ואנו נשמח לעמוד לרשותכם:</p>
+                    <p class="p-12">* השדות המסומנים בכוכבית (*) הינם שדות חובה</p>
+                    <form id="contact-form">
+                        <div>
+                            <label class="p-12" for="fname">* שם פרטי</label>
+                            <input type="text" required>
+                            <p class="error">שדה חובה</p>
+                        </div>
+                        <div>
+                            <label class="p-12" for="lname">* שם משפחה</label>
+                            <input type="text" required>
+                            <p class="error">שדה חובה</p>
+                        </div>
+                        <div>
+                            <label class="p-12" for="phone">* טלפון</label>
+                            <input type="text" id="phone" pattern="[0-9]{9}" maxlength="10" required>
+                            <p class="error">שדה חובה</p>
+                        </div>
+                        <div>
+                            <label class="p-12" for="email">* E-mail</label>
+                            <input type="email" required pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}">
+                            <p class="error">קלט לא מתאים</p>
+                        </div>
+                        <div>
+                            <textarea rows="6" cols="35" placeholder="תוכן הפנייה"></textarea>
+                        </div>
+                        <button class="submit" type="button" onclick="sendForm()">שלח</button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <footer>
+        <div class="wrapper">
+            <div>
+                <a href="http://www.facebook.com">
+                <img src="images/fb_icon.png" alt="facebook"></a>
+            </div>
+            <div>
+                <a href="#">עמוד הבית</a>
+            </div>
+            <div>
+                <a href="#">מחירונים</a>
+            </div>
+            <div>
+                <a href="#">קריירה</a>
+            </div>
+            <div>
+                <a href="#">תנאי שימוש</a>
+            </div>
+            <div>
+                <a href="#">נגישות</a>
+            </div>
+            <div>
+                <a href="#">מפת אתר</a>
+            </div>
+            <div>
+                <a href="contact.html">צור קשר</a>
+            </div>
+            <div>
+                <a href="#">שטחי מסחר</a>
+            </div>
+            <div>
+                <a href="#">הסדר פשרה בתובענה הייצוגית בעניין הסדר פזומט</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

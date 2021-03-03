@@ -6,7 +6,9 @@ function displayNextImage() {
 function startTimer() {
     setInterval(displayNextImage, 3000);
 }
-
+function sendForm(){
+    document.getElementById("contact-form").className = " was-submitted";
+}
 var images = [], x = -1;
 images[0] = "images/banner_atar.jpg";
 images[1] = "images/250X110571325734.jpg";
