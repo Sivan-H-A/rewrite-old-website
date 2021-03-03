@@ -7,8 +7,13 @@ body{
     text-align: right;
     font-family: Arial, Helvetica, sans-serif;
 }
-.header{
-    background-image: linear-gradient(#909090 0%,#909090 10%,#909090 85%, #fff );                
+.container{
+    width: 900px;
+    margin: 0 auto;
+    padding: 5px;
+}
+header{
+    background-image: linear-gradient(#909090,#989898 80%,#aaa 95%, #bbb 98%, #fff );                
     height: 105px;
     width: 100%;
     display: flex;
@@ -27,7 +32,7 @@ body{
     flex-wrap: wrap;
     justify-content: flex-end; 
     margin-top: 20px;
-    width: 900px;
+    width: 100%;
 }
 .search>*{
     display:block;
@@ -64,16 +69,9 @@ nav > ul > li > a, .dropdown-content > a {
     font-weight: bold;
     padding:0 15px; 
 }
-nav > ul > li>.dropdown-content:first-child> a{
-    margin-top: 10px;
-}
 nav > ul > li:not(:last-child) > a{
     border-left:2px solid #bcbcbc;
 }
-.dropdown-content > a {
-    padding: 0;
-}
-
 nav > ul > li > a:hover, nav>ul>li>.dropdown-content > a:hover{
     color: blue;
     text-decoration:underline;
@@ -84,13 +82,13 @@ nav>ul>li>.dropdown-content > a:hover {
 }
 .dropdown-content>a{
     border-bottom: 1px solid #bcbcbc;
-    padding:5px 5px;
+    padding:5px ;
+}
+.dropdown-content>a:first-child{
+    padding-top: 0 ;
 }
 .dropdown {
     position: relative;
-  }
-  .dropdown-content>a:first-child{
-      margin-top: 10px;
   }
 .dropdown-content {
     background-color: #909090;
@@ -99,13 +97,127 @@ nav>ul>li>.dropdown-content > a:hover {
     right: 15px;
     width: max-content;
     display: none;
-    padding-top: 10px;
-    background-image: linear-gradient(0deg,#909090 ,#959595 85%,#9a9a9a 90%, #aaa 95%, #ccc );                
-    background-image: linear-gradient(0deg,#909090 0%,#9a9a9a 80%,#aaa 85%,#ccc 90%, #eee 93%, #909090 95%);
 }
-  .dropdown:hover > .dropdown-content {
+.dropdown-content::before{
     display: block;
-  }
+    position: relative;
+    background-image: linear-gradient(#959595,#989696 10%,#a1a1a1 20%, #989696 80%);
+    height: 20px;
+    width: 100%;
+    content: '';
+}
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+.container>.row{
+    display: flex;
+    margin-top: 30px;
+}
+.row > div[class="col"]{
+    margin: 0 5px;
+}
+div[class ="col"]{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+div[class ^="col"]>img{
+    border-bottom-right-radius:25px;
+    position:relative;
+}
+.short-story>div> a {
+    color: white;
+    font-size: 12px;
+}
+.short-story>div> a:hover{
+    color: blue;
+}
+.short-story>div{
+    text-align: end;
+}
+.short-story{
+    color:white;
+    width: 240px;
+    padding:10px;
+    height: 110px;
+    background-color: rgba(128,128,128,.85);
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    bottom:7px;
+    right:7px;
+    border-bottom-right-radius:25px;
+}
+.f-14{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+.f-13{
+    font-size: 13px;
+    margin:0;
+    margin-top:4px;
+}
+.short-story>div>a:hover + .switch-img{
+    content: url('images/read_more_blue.png');
+}
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border:1px solid #ececec;
+    border-top-right-radius: 25px;
+    background-image: linear-gradient(#fff,#efefef 50%,#eeeeee 60%,  #efefef);
+}
+.banner>.f-14{
+    color: #575757;
+    margin: 1em 5px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.banner>*{
+    padding:0 20px;
+}
+.line{
+    width: 250px;
+    border-bottom: 2px solid #ececec;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    display: block;
+    margin-bottom: 20px;
+    }
+.banner>div{
+    margin: 20px 0;
+    text-align: end;
+    color:#72716d;
+}
+.banner>div>a{
+    color:#72716d;
+    font-size: 13px;
+}
+.banner>div>a:hover {
+    color:blue;
+}
+.banner>div>a:hover + .switch-img{
+    content: url('images/read_more_blue.png');
+}
+.location{
+    display: flex;
+    flex-direction: column;
+}
+.location>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.map{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 footer{ 
     background-color: #919191;
     position: fixed;
