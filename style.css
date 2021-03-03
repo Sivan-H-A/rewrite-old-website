@@ -163,9 +163,6 @@ div[class ^="col"]>img{
     content: url('images/read_more_blue.png');
 }
 .banner{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     border:1px solid #ececec;
     border-top-right-radius: 25px;
     background-image: linear-gradient(#fff,#efefef 50%,#eeeeee 60%,  #efefef);
@@ -183,7 +180,7 @@ div[class ^="col"]>img{
     width: 250px;
     border-bottom: 2px solid #ececec;
     position: absolute;
-    top: 30px;
+    top: 25px;
     right: 20px;
     display: block;
     margin-bottom: 20px;
@@ -203,18 +200,33 @@ div[class ^="col"]>img{
 .banner>div>a:hover + .switch-img{
     content: url('images/read_more_blue.png');
 }
-.location{
-    display: flex;
-    flex-direction: column;
-}
-.location>div{
-    display: flex;
-    justify-content: space-between;
-}
-
 .map{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 4px !important;
+    width: 290px;
+}
+
+.locations{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.locations>div{
+    padding:5px;
+    display: flex;
+    justify-content: space-between;
+}
+.locations>div>a{
+    font-size: 13px;   
+    color:#72716d;
+    padding-left: 5px;
+}
+.locations>div>a:hover + .switch-img{
+    content: url('images/read_more_blue.png');
+}
+.locations>div>a:hover{
+    color:blue;
 }
 
 
