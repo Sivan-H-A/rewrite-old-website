@@ -6,20 +6,28 @@ function displayNextImage() {
 function startTimer() {
     setInterval(displayNextImage, 3000);
 }
+
 function sendForm(){
+    document.getElementById("contact-form").className = " was-submitted";  
+}
+
+function onEmailChange(val){
+    alert("the input is:"+val)
     const regex= new RegExp("[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$");
-    document.getElementById("contact-form").className = " was-submitted";
-    if(document.getElementById("email").value && !regex.test(document.getElementById("email").value)){
+    if(val && !regex.test(val)){
         document.getElementById("error-not-exist").style.display ="none";
         document.getElementById("error-not-valid").style.display = "initial";
     }
     else{
         if(!document.getElementById("email").value){
             document.getElementById("error-not-exist").style.display= "initial";
-        }
-        document.getElementById("error-not-valid").style.display = "none";
+        } else{
+            document.getElementById("error-not-exist").style.display="none";   
+        }      
+        document.getElementById("error-not-valid").style.display = "none";     
     }
 }
+
 var images = [], x = -1;
 images[0] = "images/banner_atar.jpg";
 images[1] = "images/250X110571325734.jpg";
