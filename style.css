@@ -350,6 +350,7 @@ nav>ul>li>.dropdown-content > a:hover {
     right: 15px;
     width: max-content;
     display: none;
+    z-index: 1;
 }
 .dropdown-content::before{
     display: block;
