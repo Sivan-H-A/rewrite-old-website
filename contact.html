@@ -131,13 +131,14 @@
                         </div>
                         <div>
                             <label class="p-12" for="phone">* טלפון</label>
-                            <input type="text" id="phone" pattern="[0-9]{9}" maxlength="10" required>
+                            <input type="text" id="phone" pattern="[0-9]{10}" maxlength="10" required>
                             <p class="error">שדה חובה</p>
                         </div>
                         <div>
                             <label class="p-12" for="email">* E-mail</label>
-                            <input type="email" required pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}">
-                            <p class="error">קלט לא מתאים</p>
+                            <input id="email" type="email" required pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}">
+                            <p id="error-not-exist" class="error">שדה חובה</p>
+                            <p id="error-not-valid" class="error">קלט לא מתאים</p>
                         </div>
                         <div>
                             <textarea rows="6" cols="35" placeholder="תוכן הפנייה"></textarea>

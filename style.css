@@ -245,10 +245,14 @@ div[class ^="col"]>img{
     margin:2px 0 5px 0;
     font-size: 12px;
 } 
+.error-no-exist {
+    display: none;
+} 
 .was-submitted input:invalid + .error {
     display: initial;  
 }
 .submit{
+    display: block;
     font-size: 14px;
     border:none;
     text-align: center;
