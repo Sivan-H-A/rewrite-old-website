@@ -175,7 +175,7 @@ div[class ^="col"]>img{
     margin:0;
     font-size: 13px;
 }
-.contact-info{
+.contact-info, .more{
     width: 250px;
 }
 .extra-info>div{
