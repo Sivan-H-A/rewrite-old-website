@@ -175,14 +175,13 @@ div[class ^="col"]>img{
     margin:0;
     font-size: 13px;
 }
-.contact-info, .more{
-    width: 250px;
-}
 .extra-info>div{
     height: 160px;
     padding: 10px;
+    width: 100%;
 }
 .extra-info{
+    width:calc(100%/3);
     height: 370px;
     margin-top:55px;
     display: flex;
